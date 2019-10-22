@@ -1,12 +1,27 @@
 import React from 'react';
 import { movies } from '../data';
 
-const Movies = () => {
-  return (
-    <div>
-        {/*{code here}*/}
-    </div>
-  );
-};
+let arrayOfMovies = movies
 
-export default Movies;
+const Movies = () => {
+    return (
+        <div>
+        <h1>Movies Page</h1>
+        {arrayOfMovies.map(movie => {
+            return(
+                <div>
+                    {movie.title}
+                    <br></br>
+                    {movie.time}
+                    <br></br>
+                    {movie.genres}
+                    <br></br>
+                    {movies.metascore}
+                </div>
+            )
+        })}
+        </div>
+    )
+}
+
+export default Movies
